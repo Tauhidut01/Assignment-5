@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Service Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      <span class="site-name">Emergency <br> Service</span>
+    </div>
+    <div class="nav-right">
+      <span class="heart">
+        <i class="fa-solid fa-heart"></i>
+        <span id="heartCount">0</span>
+      </span>
+      <span class="coins">
+        <i class="fa-solid fa-coins"></i>
+        <span id="coinCount">0</span>
+      </span>
+      <span class="copy">
+        <p class="copy-text">Copy</p>
+        <span id="copyCount">0</span>
+      </span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/logo.png" alt="BD Logo" class="hero-logo">
+    <h1>Emergency Service Directory</h1>
+    <p>Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+  </section>
+
+  <!-- Main Section -->
+  <main class="container">
+    <!-- Hotline Section -->
+    <div class="hotline">
+      <!-- 1. National Emergency -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Emergency"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>National Emergency Number</h3>
+        <p class="number">999</p>
+        <span class="badge all">All</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('National Emergency Number','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 2. Police -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/police.png" alt="Police"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Police Helpline <br> Number</h3>
+        <p class="number">999</p>
+        <span class="badge police">Police</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Police Helpline Number','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 3. Fire Service -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/fire-service.png" alt="Fire"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Fire Service <br> Number</h3>
+        <p class="number">999</p>
+        <span class="badge fire">Fire</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 4. Ambulance -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/ambulance.png" alt="Ambulance"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Ambulance Service</h3>
+        <p class="number">1994-999999</p>
+        <span class="badge health">Health</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('1994-999999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Ambulance Service','1994-999999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 5. Women & Child -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Women"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Women & Child Helpline</h3>
+        <p class="number">109</p>
+        <span class="badge help">Help</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('109')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Women & Child Helpline','109')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 6. Anti-Corruption -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Corruption"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Anti-Corruption Helpline</h3>
+        <p class="number">106</p>
+        <span class="badge govt">Govt.</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('106')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Anti-Corruption Helpline','106')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 7. Electricity -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Electricity"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Electricity Helpline <br><br></h3>
+        <p class="number">16216</p>
+        <span class="badge electricity">Electricity</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('16216')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Electricity Helpline','16216')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 8. Brac -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Brac"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Brac Helpline <br><br></h3>
+        <p class="number">16445</p>
+        <span class="badge ngo">NGO</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('16445')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Brac Helpline','16445')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- 9. Bangladesh Railway -->
+      <div class="card">
+        <div class="card-header">
+          <span class="service-img"><img src="assets/emergency.png" alt="Railway"></span>
+          <span class="fav"><i class="fa-regular fa-heart"></i></span>
+        </div>
+        <h3>Bangladesh Railway Helpline</h3>
+        <p class="number">163</p>
+        <span class="badge travel">Travel</span>
+        <div class="btn-group">
+          <button onclick="copyNumber('163')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Bangladesh Railway Helpline','163')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <aside class="history">
+      <div class="history-header">
+        <h3><i class="fa-solid fa-clock-rotate-left"></i> Call History</h3>
+        <button onclick="clearHistory()">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

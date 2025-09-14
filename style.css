@@ -1,0 +1,280 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 10px 20px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: nowrap; /* prevent wrapping */
+}
+
+.nav-left { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+.logo {
+  width: 40px;
+}
+.site-name { 
+  font-weight: bold; 
+  font-size: 18px; 
+  color: #004d40;
+}
+.nav-right {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping */
+  align-items: center;
+  margin-top: 0; /* remove margin that pushes it down */
+  gap: 10px; /* optional: spacing between items */
+}
+
+.nav-right span {
+  margin-left: 10px; 
+  font-size: 16px;
+}
+.nav-right .heart,
+.nav-right .coins,
+.nav-right .copy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 30px;
+}
+.copy-text{
+  font-size: 16px;
+}
+.nav-right .heart {
+  background-color: #ccfdcf;
+}
+.nav-right .heart i {
+  color: red;
+}
+.nav-right .coins {
+  background-color: #ccfdcf;
+}
+.nav-right .coins i {
+  color: #FFB703;
+}
+.nav-right .copy {
+  background-color: #28a745;
+  color: #fff;
+}
+.nav-right .copy i {
+  margin-left: 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #004d40, #00796b);
+  color: #fff;
+}
+.hero-logo { 
+  width: 80px; 
+  margin-bottom: 10px; 
+}
+.hero h1 {
+  font-size: 22px;
+}
+.hero p {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Hotline Cards */
+.hotline {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.service-img img {
+  width: 40px; 
+}
+.fav {
+  cursor: pointer;
+  color: red; 
+}
+.number {
+  font-size: 20px; 
+  font-weight: bold; 
+  margin: 10px 0; 
+}
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.badge.all { background: #eee; }
+.badge.police { background: #cce5ff; }
+.badge.fire { background: #ffcdd2; }
+.badge.health { background: #c8e6c9; }
+.badge.help { background: #f8bbd0; }
+.badge.govt { background: #d1c4e9; }
+.badge.electricity { background: #ffe082; }
+.badge.ngo { background: #b2ebf2; }
+.badge.travel { background: #c5cae9; }
+
+.btn-group {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+.btn-group button {
+  flex: 1;
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-group button:first-child {
+  background: #f0f0f0; 
+}
+.btn-group button:first-child:hover {
+  background-color: #a4f7b8;
+  font-weight: bold;          
+}
+.btn-group button:last-child {
+  background: #28a745; 
+  color: #fff; 
+}
+
+/* History */
+.history {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+.history-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 10px;
+}
+.history-header button {
+  border: none; 
+  background: #00A63E; 
+  color: #fff;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+#historyList {
+  list-style: none; 
+  font-size: 14px; 
+}
+#historyList li {
+  padding: 6px 0; 
+  border-bottom: 1px solid #ddd; 
+}
+
+/* -------------------- Responsive -------------------- */
+
+/* Responsive Enhancements */
+
+/* Mobile-first tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* force horizontal even on small screen */
+    align-items: center;
+    
+  }
+
+  .nav-right {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .nav-right span {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+
+  .nav-right .heart,
+  .nav-right .coins,
+  .nav-right .copy {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Even smaller screens (phones) */
+@media (max-width: 480px) {
+  .site-name {
+    font-size: 16px;
+  }
+
+  .nav-left {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 32px;
+  }
+
+  .hero-logo {
+    width: 60px;
+  }
+
+  .hero h1 {
+    font-size: 16px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .number {
+    font-size: 16px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
