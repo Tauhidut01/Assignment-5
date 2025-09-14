@@ -37,10 +37,10 @@ html, body {
 }
 .nav-right {
   display: flex;
-  flex-wrap: nowrap; /* prevent wrapping */
+  flex-wrap: nowrap; 
   align-items: center;
-  margin-top: 0; /* remove margin that pushes it down */
-  gap: 10px; /* optional: spacing between items */
+  margin-top: 0; 
+  gap: 10px; 
 }
 
 .nav-right span {
@@ -83,7 +83,7 @@ html, body {
 .hero {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(135deg, #004d40, #00796b);
+  background: linear-gradient(135deg, #015447ca, #00796b);
   color: #fff;
 }
 .hero-logo { 
@@ -212,12 +212,12 @@ html, body {
 
 /* -------------------- Responsive -------------------- */
 
-/* Responsive Enhancements */
 
-/* Mobile-first tweaks */
+
+/* Mobile*/
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* force horizontal even on small screen */
+    flex-direction: row; 
     align-items: center;
     
   }
